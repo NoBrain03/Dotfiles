@@ -1,3 +1,10 @@
+local vim = vim
+  local opt = vim.opt
+
+  opt.foldmethod = "expr"
+  opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "cpp", "python", "lua", "vim", "vimdoc", "query" },
@@ -14,8 +21,7 @@ require'nvim-treesitter.configs'.setup {
 
   ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-
-  highlight = {
+    highlight = {
     enable = true,
 
     -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to

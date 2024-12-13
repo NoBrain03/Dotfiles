@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = {"lua_ls","clangd","rust_analyzer","gopls"},
+	ensure_installed = {"clangd","rust_analyzer","gopls"}, -- "lua_ls",
 })
 
 
@@ -14,7 +14,7 @@ local on_attach = function(_,_)
 	vim.keymap.set('n','K',vim.lsp.buf.hover, {})
 end
 
-local capabilies = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require("lspconfig").lua_ls.setup {
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -26,6 +26,18 @@ capabilities = capabilities,
 
 require'lspconfig'.pylsp.setup{}
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.gopls.setup{}
+require'lspconfig'.golangci_lint_ls.setup{}
+require'lspconfig'.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim', 'capabilities'},
+      },
+    },
+  },
+}
 require'lspconfig'.rust_analyzer.setup{
   settings = {
     ['rust-analyzer'] = {
