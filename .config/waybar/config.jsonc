@@ -2,8 +2,8 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width "spacing": 0, // Gaps between modules (4px)
+    //"height": 37, // Waybar height (to be removed for auto height)
+    //"width": 1280, // Waybar width "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
 	"hyprland/workspaces",
@@ -13,23 +13,23 @@
         "custom/media"
     ],
     "modules-center": [
-    "sway/window",
+    "hypr/window",
 	"idle_inhibitor",
 	"clock",
-	"power-profiles-daemon"
-
+	
     ],
     "modules-right": [
 	//"custom/media",
     "mpd",
     "network",
     "cpu",
-    //   "memory",
-   //    "temperature",
-    "backlight",
+    // "memory",
+   // "temperature",
+   // "backlight",
+	"power-profiles-daemon",
 	"pulseaudio",
     "keyboard-state",
-    "sway/language",
+    //"sway/language",
     "battery",
   //"battery#bat2",
   //"clock",
