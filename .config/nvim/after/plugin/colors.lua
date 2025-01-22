@@ -1,5 +1,5 @@
 require("catppuccin").setup ({
-	flavour = "mocha",
+	flavour = "frappe",
 	background = {
 	light = "latte",
 	dark = "mocha",
@@ -67,7 +67,7 @@ require("cyberdream").setup({
 
 function ColorMyPencils(color)
 -- require('ayu').setup({mirage = false, terminal = true, overrides = {},})
-	color = color or "eva01" --"cyberdream" --"catppuccin"--"catppuccin" "night-owl"
+	color = color or "catppuccin-frappe" --"cyberdream" --"catppuccin"--"catppuccin" "night-owl"
 	vim.cmd.colorscheme(color)
 	vim.api.nvim_set_hl(0,"Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0,"NormalFloat", { bg = "none" })

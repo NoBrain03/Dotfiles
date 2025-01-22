@@ -14,14 +14,13 @@
     ],
     "modules-center": [
     "hypr/window",
-	"idle_inhibitor",
 	"clock",
-	
+	"idle_inhibitor",
     ],
     "modules-right": [
 	//"custom/media",
     "mpd",
-    "network",
+	"network",
     "cpu",
     // "memory",
    // "temperature",
@@ -32,7 +31,7 @@
     //"sway/language",
     "battery",
   //"battery#bat2",
-  //"clock",
+	
 	"tray"
     ],
     // Modules configuration
@@ -47,7 +46,7 @@
              "2": " ",
              "3": " ",
              "4": " ",
-             "5": "󰍩 ",
+             "5": "MPD",
 			 "6": " ",
              "urgent": "",
              "focused": "",
